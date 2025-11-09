@@ -1,0 +1,6 @@
+[core]
+    remote = dog_dataset
+['remote "cheese_dataset"']
+    url = gs://ac215-hw2-lmj260-data-versioning/dvc_store
+['remote "dog_dataset"']
+    url = gs://ac215-hw2-lmj260-data-versioning/dvc_store
