@@ -114,19 +114,12 @@ You can go to your GCS Bucket folder `dvc_store` to view the tracking files
 
 
 #### Update Git to track DVC 
-**⚠️ IMPORTANT: You must exit the Docker container before running these git commands!** The container doesn't have SSH keys configured for GitHub authentication.
-
-1. **Exit the container** (type `exit` or press Ctrl+D)
-2. **Run these commands in your local terminal** (outside the container):
-   - First run git status `git status`
-   - Add changes `git add .`
-   - Commit changes `git commit -m 'dataset updates...'`
-   - Add a dataset tag `git tag -a 'dataset_v20' -m 'tag dataset'`
-   - **If you get an SSH authenticity error**, add GitHub's host key to your known_hosts file:
-     ```bash
-     ssh-keyscan github.com >> ~/.ssh/known_hosts
-     ```
-   - Push changes `git push --atomic origin main dataset_v20`
+Run this outside the container.
+- First run git status `git status`
+- Add changes `git add .`
+- Commit changes `git commit -m 'dataset updates...'`
+- Add a dataset tag `git tag -a 'dataset_v20' -m 'tag dataset'`
+- Push changes `git push --atomic origin main dataset_v20`
 
 
 ### Download Data to view version
